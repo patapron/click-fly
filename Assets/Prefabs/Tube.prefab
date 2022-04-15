@@ -71,8 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 6631428992097503550, guid: 0e0ca4d424e66e341add1f2a187e1493, type: 3}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: -275871054329887514, guid: d11c44ba88bcc884cbb1e7c164a35c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,18 +96,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000154078, y: 0.0048829913}
+  m_Offset: {x: 0.004802346, y: 0.017627299}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.06, y: 0, z: 0.049999997, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.26, y: 1.6}
+    oldSize: {x: 0.61, y: 1.57}
     newSize: {x: 0.26, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23917568, y: 1.5902339}
+  m_Size: {x: 0.54836416, y: 1.5647453}
   m_EdgeRadius: 0
 --- !u!1 &8111922325658613482
 GameObject:
@@ -227,8 +227,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 7755374115902343667, guid: 0e0ca4d424e66e341add1f2a187e1493, type: 3}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 2780603786646564439, guid: d11c44ba88bcc884cbb1e7c164a35c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -252,18 +252,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0002771914, y: -0.004125893}
+  m_Offset: {x: -0.033821225, y: -0.017152637}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.26, y: 1.6}
+    oldSize: {x: 0.67, y: 1.61}
     newSize: {x: 0.26, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23960823, y: 1.5869845}
+  m_Size: {x: 0.5281496, y: 1.560931}
   m_EdgeRadius: 0
 --- !u!1 &8989332877057167852
 GameObject:
@@ -291,7 +291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8989332877057167852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.117, y: 0.013, z: 0}
+  m_LocalPosition: {x: 0.275, y: 0.013, z: 0}
   m_LocalScale: {x: 0.025, y: 3.8024766, z: 1}
   m_Children: []
   m_Father: {fileID: 8111922325658613481}

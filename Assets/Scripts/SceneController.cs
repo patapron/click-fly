@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public GameObject loseGO;
+    public GameObject settingsGO;
     //private GameObject scoreGO;
     //private GameObject recordTextGO;
     public AudioClip audioGame;
@@ -15,6 +16,8 @@ public class SceneController : MonoBehaviour
     public float musicVolume;
     public GameObject player;
     private GameObject playerInstace;
+    private bool musicOn = true;
+    private bool soundOn = true;
 
 
 
@@ -42,19 +45,27 @@ public class SceneController : MonoBehaviour
         Time.timeScale = 1;
         music.Stop();
         music.clip = audioGame;
-        music.Play();
+        if (musicOn)
+        {
+            music.Play();
+        }
     }
 
     public void Lose()
     {
         music.Stop();
         music.clip = audioLose;
-        music.Play();
+        if (musicOn)
+        {
+            music.Play();
+        }
         if (ScoreController.score > PlayerPrefs.GetInt("record", 0))
         {
             PlayerPrefs.SetInt("record", ScoreController.score);
         }
         loseGO.SetActive(true);
+        loseGO.transform.Find("PlayButton").gameObject.SetActive(false);
+        loseGO.transform.Find("ResetButton").gameObject.SetActive(true);
         // Get child nested parent, parsing to GO
         loseGO.transform.Find("GameOver").gameObject.SetActive(true);
         GameObject.Find("RecordText").GetComponent<TMPro.TextMeshProUGUI>().text = "RECORD: " + PlayerPrefs.GetInt("record", 0).ToString();
@@ -82,4 +93,34 @@ public class SceneController : MonoBehaviour
         string recordLabel = GameObject.Find("RecordText").GetComponent<TMPro.TextMeshProUGUI>().text;
         recordLabel = "RECORD: 0";
     }
+
+
+    public void ToggleMusic()
+    {
+        if (musicOn)
+        {
+            musicOn = false;
+            music.Stop();
+            //GameObject button = settingsGO.transform.Find("MusicButton").gameObject.Get;
+            //button.GetComponent<Image>().SetTransparency(0.5f);
+            //loseGO.transform.Find("MusicButton").gameObject.GetComponent<Image>().SetTransparency(0.5f);
+        }
+        else
+        {
+            musicOn = true;
+            music.Play();
+            //loseGO.transform.Find("MusicButton").gameObject.GetComponent<Image>().SetTransparency(1f);
+        }
+    }
+
+    public bool GetSoundValue()
+    {
+        return soundOn;
+    }
+
+    public void ToggleSound()
+    {
+        soundOn = !soundOn;
+    }
+
 }
