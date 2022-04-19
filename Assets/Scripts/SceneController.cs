@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 
 public class SceneController : MonoBehaviour
 {
     public GameObject loseGO;
     public GameObject settingsGO;
+    public GameObject scoreGO;
     //private GameObject scoreGO;
     //private GameObject recordTextGO;
     public AudioClip audioGame;
@@ -18,6 +21,10 @@ public class SceneController : MonoBehaviour
     private GameObject playerInstace;
     private bool musicOn = true;
     private bool soundOn = true;
+
+    private Color transp = new Color(255, 255, 255, 0.5f);
+    private Color solid = new Color(255, 255, 255, 1);
+
 
 
 
@@ -42,6 +49,7 @@ public class SceneController : MonoBehaviour
         ScoreController.score = 0;
         playerInstace = Instantiate(player, new Vector3(-0.40f, 0, 0), Quaternion.identity);
         loseGO.SetActive(false);
+        scoreGO.transform.Find("ClickImage").gameObject.SetActive(true);
         Time.timeScale = 1;
         music.Stop();
         music.clip = audioGame;
@@ -101,17 +109,20 @@ public class SceneController : MonoBehaviour
         {
             musicOn = false;
             music.Stop();
-            //GameObject button = settingsGO.transform.Find("MusicButton").gameObject.Get;
-            //button.GetComponent<Image>().SetTransparency(0.5f);
-            //loseGO.transform.Find("MusicButton").gameObject.GetComponent<Image>().SetTransparency(0.5f);
+            SetButtonAlpha("MusicButton", false);
         }
         else
         {
             musicOn = true;
             music.Play();
-            //loseGO.transform.Find("MusicButton").gameObject.GetComponent<Image>().SetTransparency(1f);
+            SetButtonAlpha("MusicButton", true);
         }
     }
+
+    private void SetButtonAlpha(string name, bool value)
+    {
+        settingsGO.transform.Find(name).gameObject.GetComponent<Image>().color = value ? solid : transp;
+    } 
 
     public bool GetSoundValue()
     {
@@ -121,6 +132,7 @@ public class SceneController : MonoBehaviour
     public void ToggleSound()
     {
         soundOn = !soundOn;
+        SetButtonAlpha("SoundButton", soundOn);
     }
 
 }

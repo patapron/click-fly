@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
     {
         if (alive)
         {
-
             if (Input.GetMouseButtonDown(0))
             {
                 if (sceneController.GetSoundValue())
