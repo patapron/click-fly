@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRB;
     private float maxRotate = 0;
     public bool alive;
+    public bool firstClick = false;
 
     //audio
     public AudioClip crashPlane;
@@ -29,7 +30,6 @@ public class PlayerController : MonoBehaviour
             audioPlayer.Stop();
             audioPlayer.volume = playerVolume;
             audioPlayer.clip = audioPlane;
-            audioPlayer.Play();
         }
 
         playerRB = GetComponent<Rigidbody2D>();
@@ -41,8 +41,15 @@ public class PlayerController : MonoBehaviour
     {
         if (alive)
         {
+
             if (Input.GetMouseButtonDown(0))
             {
+                if (!firstClick)
+                {
+                    firstClick = true;
+                    GetComponent<Rigidbody2D>().gravityScale = 0.3f;
+                    StartCoroutine(HideClickButton());
+                }
                 if (sceneController.GetSoundValue())
                 {
                     audioPlayer.Stop();
@@ -54,20 +61,26 @@ public class PlayerController : MonoBehaviour
                 maxRotate = 40 - transform.localEulerAngles.z;
             }
 
-            if (maxRotate > 1)
+            if (firstClick && maxRotate > 1)
             {
                 transform.rotation = Quaternion.Euler(0, 0, transform.localEulerAngles.z + 0.1f);
                 maxRotate -= 0.1f;
             }
-            else
+            else if (firstClick && maxRotate <= 1)
             {
                 maxRotate = 0;
                 transform.rotation = Quaternion.Euler(0, 0, playerRB.velocity.y > 0 ? playerRB.velocity.y * 40 : playerRB.velocity.y * 10);
                 //print("bajando: " + transform.localEulerAngles.z);
             }
-
         }
     }
+
+    IEnumerator HideClickButton()
+    {
+        yield return new WaitForSeconds(4);
+        GameObject.Find("ClickImage").SetActive(false);
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -80,6 +93,11 @@ public class PlayerController : MonoBehaviour
         }
         alive = false;
         sceneController.Lose();
+    }
+
+    public bool GetFirstClick()
+    {
+        return firstClick;
     }
 
 
