@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 1;
@@ -44,21 +44,31 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (!firstClick)
+                // Check if the mouse was clicked over a UI element
+                if (EventSystem.current.IsPointerOverGameObject() && EventSystem.current.currentSelectedGameObject?.gameObject.tag == "Settings")
                 {
-                    firstClick = true;
-                    GetComponent<Rigidbody2D>().gravityScale = 0.3f;
-                    StartCoroutine(HideClickButton());
+
                 }
-                if (sceneController.GetSoundValue())
+                else
                 {
-                    audioPlayer.Stop();
-                    audioPlayer.Play();
+                    if (!firstClick)
+                    {
+                        firstClick = true;
+                        GetComponent<Rigidbody2D>().gravityScale = 0.3f;
+                        StartCoroutine(HideClickButton());
+                    }
+                    if (sceneController.GetSoundValue())
+                    {
+                        audioPlayer.Stop();
+                        audioPlayer.Play();
+                    }
+                    //playerRB.velocity = Vector2.zero;
+                    //playerRB.AddForce(new Vector2(0, 200f));
+                    playerRB.velocity = Vector2.up * speed;
+                    maxRotate = 40 - transform.localEulerAngles.z;
                 }
-                //playerRB.velocity = Vector2.zero;
-                //playerRB.AddForce(new Vector2(0, 200f));
-                playerRB.velocity = Vector2.up * speed;
-                maxRotate = 40 - transform.localEulerAngles.z;
+
+
             }
 
             if (firstClick && maxRotate > 1)
