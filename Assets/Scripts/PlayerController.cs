@@ -51,27 +51,30 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    if (!firstClick)
+                    if (Time.timeScale > 0)
                     {
-                        firstClick = true;
-                        GetComponent<Rigidbody2D>().gravityScale = 0.3f;
-                        StartCoroutine(HideClickButton());
+                        if (!firstClick)
+                        {
+                            firstClick = true;
+                            GetComponent<Rigidbody2D>().gravityScale = 0.3f;
+                            StartCoroutine(HideClickButton());
+                        }
+                        if (sceneController.GetSoundValue())
+                        {
+                            audioPlayer.Stop();
+                            audioPlayer.Play();
+                        }
+                        //playerRB.velocity = Vector2.zero;
+                        //playerRB.AddForce(new Vector2(0, 200f));
+                        playerRB.velocity = Vector2.up * speed;
+                        maxRotate = 40 - transform.localEulerAngles.z;
                     }
-                    if (sceneController.GetSoundValue())
-                    {
-                        audioPlayer.Stop();
-                        audioPlayer.Play();
-                    }
-                    //playerRB.velocity = Vector2.zero;
-                    //playerRB.AddForce(new Vector2(0, 200f));
-                    playerRB.velocity = Vector2.up * speed;
-                    maxRotate = 40 - transform.localEulerAngles.z;
                 }
 
 
             }
 
-            if (firstClick && maxRotate > 1)
+            if (firstClick && maxRotate > 1 && Time.timeScale > 0)
             {
                 transform.rotation = Quaternion.Euler(0, 0, transform.localEulerAngles.z + 0.1f);
                 maxRotate -= 0.1f;

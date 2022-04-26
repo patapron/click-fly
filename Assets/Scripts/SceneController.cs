@@ -46,6 +46,11 @@ public class SceneController : MonoBehaviour
 
     public void RunGame()
     {
+
+        settingsGO.transform.Find("PauseButton").gameObject.SetActive(true);
+
+        //SetButtonAlpha("MusicButton", true);
+
         ScoreController.score = 0;
         playerInstace = Instantiate(player, new Vector3(-0.40f, 0, 0), Quaternion.identity);
         loseGO.SetActive(false);
@@ -61,6 +66,7 @@ public class SceneController : MonoBehaviour
 
     public void Lose()
     {
+        settingsGO.transform.Find("PauseButton").gameObject.SetActive(false);
         music.Stop();
         music.clip = audioLose;
         if (musicOn)
@@ -135,4 +141,15 @@ public class SceneController : MonoBehaviour
         SetButtonAlpha("SoundButton", soundOn);
     }
 
+    public void PauseGame()
+    {
+        if(Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
+    }
 }
