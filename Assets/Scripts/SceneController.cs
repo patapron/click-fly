@@ -90,6 +90,7 @@ public class SceneController : MonoBehaviour
     public void Reset()
     {
         removeEnemies();
+        removePowers();
         Destroy(playerInstace);
         RunGame();
     }
@@ -99,6 +100,13 @@ public class SceneController : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
             GameObject.Destroy(enemy);
+    }
+
+    private void removePowers()
+    {
+        GameObject[] powers = GameObject.FindGameObjectsWithTag("Power");
+        foreach (GameObject power in powers)
+            GameObject.Destroy(power);
     }
 
     public void DeleteRecord()

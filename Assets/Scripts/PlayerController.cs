@@ -97,15 +97,24 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //audio
-        if (sceneController.GetSoundValue())
+
+        if (collision.gameObject.tag == "Power")
         {
-            audioPlayer.Stop();
-            audioPlayer.clip = crashPlane;
-            audioPlayer.Play();
+            collision.gameObject.SetActive(false);
         }
-        alive = false;
-        sceneController.Lose();
+        else
+        {
+            //audio
+            if (sceneController.GetSoundValue())
+            {
+                audioPlayer.Stop();
+                audioPlayer.clip = crashPlane;
+                audioPlayer.Play();
+            }
+            alive = false;
+            sceneController.Lose();
+
+        }
     }
 
     public bool GetFirstClick()
