@@ -94,27 +94,53 @@ public class PlayerController : MonoBehaviour
         GameObject.Find("ClickImage").SetActive(false);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Power")
+        {
+            switch (collision.gameObject.name)
+            {
+                case "Diamond":
+                    ScoreController.score = ScoreController.score + 20;
+                    break;
+                case "Gold":
+                    ScoreController.score = ScoreController.score + 15;
+                    break;
+                case "Silver":
+                    ScoreController.score = ScoreController.score + 10;
+                    break;
+                case "Bronze":
+                    ScoreController.score = ScoreController.score + 5;
+                    break;
+
+
+            }
+            collision.gameObject.SetActive(false);
+        }
+        else if (collision.gameObject.tag == "FlyEnemy")
+        {
+            collision.gameObject.SetActive(false);
+            loseGame();
+        }
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        loseGame();
+    }
 
-        if (collision.gameObject.tag == "Power")
+    private void loseGame()
+    {
+        //audio
+        if (sceneController.GetSoundValue())
         {
-            collision.gameObject.SetActive(false);
+            audioPlayer.Stop();
+            audioPlayer.clip = crashPlane;
+            audioPlayer.Play();
         }
-        else
-        {
-            //audio
-            if (sceneController.GetSoundValue())
-            {
-                audioPlayer.Stop();
-                audioPlayer.clip = crashPlane;
-                audioPlayer.Play();
-            }
-            alive = false;
-            sceneController.Lose();
-
-        }
+        alive = false;
+        sceneController.Lose();
     }
 
     public bool GetFirstClick()

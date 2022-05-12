@@ -1,0 +1,768 @@
+fileFormatVersion: 2
+guid: a858c6fda1892bb49908b36612b05e31
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2570191140059430742
+    second: nuevos iconos_1
+  - first:
+      213: -8935496104841646440
+    second: nuevos iconos_2
+  - first:
+      213: -7715362185713214142
+    second: nuevos iconos_3
+  - first:
+      213: 540193795370814112
+    second: nuevos iconos_4
+  - first:
+      213: 4086750605423015468
+    second: nuevos iconos_5
+  - first:
+      213: 6030141788089060160
+    second: nuevos iconos_6
+  - first:
+      213: -3422075725738897108
+    second: nuevos iconos_7
+  - first:
+      213: -324222183358367777
+    second: nuevos iconos_9
+  - first:
+      213: 616646839276471975
+    second: nuevos iconos_10
+  - first:
+      213: 5539826158772767939
+    second: nuevos iconos_11
+  - first:
+      213: 8453072579975729088
+    second: nuevos iconos_13
+  - first:
+      213: 8260982387662532368
+    second: nuevos iconos_14
+  - first:
+      213: -224469793806111647
+    second: nuevos iconos_16
+  - first:
+      213: -571506279881440089
+    second: nuevos iconos_17
+  - first:
+      213: -4705015585911024509
+    second: nuevos iconos_18
+  - first:
+      213: -7164043980778519996
+    second: nuevos iconos_21
+  - first:
+      213: 4015489540087543658
+    second: nuevos iconos_29
+  - first:
+      213: 5995987505257845388
+    second: nuevos iconos_31
+  - first:
+      213: -827244533615647500
+    second: nuevos iconos_32
+  - first:
+      213: 787873281933692652
+    second: nuevos iconos_33
+  - first:
+      213: -2044481540931092377
+    second: nuevos iconos_34
+  - first:
+      213: -6366570214402196037
+    second: nuevos iconos_35
+  - first:
+      213: -7639795984844787415
+    second: nuevos iconos_36
+  - first:
+      213: -4730027678166968825
+    second: nuevos iconos_37
+  - first:
+      213: 7261132228298372210
+    second: nuevos iconos_38
+  - first:
+      213: -684144272440508802
+    second: nuevos iconos_39
+  - first:
+      213: 2459739200593028685
+    second: nuevos iconos_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nuevos iconos_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 477
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0c6eb86c8d45cd0800000000000000
+      internalID: -2570191140059430742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 477
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ee60b82adbef380800000000000000
+      internalID: -8935496104841646440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 475
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d151748f68de490800000000000000
+      internalID: -7715362185713214142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_4
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 481
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa82f215672f7700800000000000000
+      internalID: 540193795370814112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 481
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26f9d9e50e07b830800000000000000
+      internalID: 4086750605423015468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 482
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b8948d10e5fa350800000000000000
+      internalID: 6030141788089060160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 482
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2198d422485280d0800000000000000
+      internalID: -3422075725738897108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_9
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 482
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd77f9c54a1208bf0800000000000000
+      internalID: -324222183358367777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_10
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 482
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a601fe7805ce8800800000000000000
+      internalID: 616646839276471975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_11
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 487
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc41174a8a61ec40800000000000000
+      internalID: 5539826158772767939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 303
+        width: 26
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf4c06a9b85f4570800000000000000
+      internalID: 8453072579975729088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_14
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 303
+        width: 26
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f226886b7e4a270800000000000000
+      internalID: 8260982387662532368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_16
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 306
+        width: 67
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 0, z: 6, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ca16d69e582ecf0800000000000000
+      internalID: -224469793806111647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_17
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 306
+        width: 60
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 9, y: 0, z: 9, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a403c0011a9118f0800000000000000
+      internalID: -571506279881440089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_18
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 303
+        width: 49
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 0, z: 5, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384d81bb04d64beb0800000000000000
+      internalID: -4705015585911024509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_21
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 306
+        width: 62
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 0, z: 7, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442cb6ac4f3349c90800000000000000
+      internalID: -7164043980778519996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_29
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 302
+        width: 35
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 5, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67f6343672e9b730800000000000000
+      internalID: 4015489540087543658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_31
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 268
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8213903ed6063350800000000000000
+      internalID: 5995987505257845388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_32
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 267
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4a477ca790584f0800000000000000
+      internalID: -827244533615647500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_33
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 248
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceecda953961fea00800000000000000
+      internalID: 787873281933692652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_34
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 239
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76085f2eeda80a3e0800000000000000
+      internalID: -2044481540931092377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_35
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 229
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd79fc1f1665a7a0800000000000000
+      internalID: -6366570214402196037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_36
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 215
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921fed6770ef9f590800000000000000
+      internalID: -7639795984844787415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_37
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 209
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706971133e09b5eb0800000000000000
+      internalID: -4730027678166968825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_38
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 191
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2747dde5a49b4c460800000000000000
+      internalID: 7261132228298372210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_39
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 193
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7eb012b86e6186f0800000000000000
+      internalID: -684144272440508802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuevos iconos_40
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 178
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46637b45cfb22220800000000000000
+      internalID: 2459739200593028685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

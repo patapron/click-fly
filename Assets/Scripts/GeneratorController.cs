@@ -6,14 +6,12 @@ public class GeneratorController : MonoBehaviour
 {
     public float timeToGenerate;
     private float timeInit = 0;
+    public GameObject[] powerUps;
     public GameObject tube;
-    public GameObject powerA;
     public float hight;
-    GameObject newPowerA;
-
-
-
+    private GameObject newPowerUp;
     private bool firstClick = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +30,15 @@ public class GeneratorController : MonoBehaviour
 
         if (firstClick && timeInit > timeToGenerate)
         {
-            if (!newPowerA)
+
+            if (!newPowerUp || newPowerUp == null)
             {
-                GameObject newPowerA = Instantiate(powerA);
-                newPowerA.transform.position = transform.position + new Vector3(0, Random.Range(-hight, hight), 0);
-                Destroy(newPowerA, 5);
+                GameObject prefabSelected = powerUps[Random.Range(0, powerUps.Length)];
+                newPowerUp = Instantiate(prefabSelected);
+                newPowerUp.transform.position = transform.position + new Vector3(0, Random.Range(-hight, hight), 0);
+                Destroy(newPowerUp, 4.5f);
             }
+            Debug.Log("valor: " + newPowerUp);
             GameObject newTube = Instantiate(tube);
             newTube.transform.position = transform.position + new Vector3(0, Random.Range(-hight, hight), 0);
             Destroy(newTube, 4);
