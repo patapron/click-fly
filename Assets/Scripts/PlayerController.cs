@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public AudioClip crashPlane;
     public AudioClip audioPlane;
     public AudioSource audioPlayer;
+
+    public AudioClip coinSound;
+    public AudioSource coinPlayer;
     public float playerVolume;
 
     public SceneController sceneController;
@@ -30,6 +33,10 @@ public class PlayerController : MonoBehaviour
             audioPlayer.Stop();
             audioPlayer.volume = playerVolume;
             audioPlayer.clip = audioPlane;
+
+            coinPlayer.Stop();
+            coinPlayer.clip = coinSound;
+
         }
 
         playerRB = GetComponent<Rigidbody2D>();
@@ -41,9 +48,9 @@ public class PlayerController : MonoBehaviour
     {
         if (alive)
         {
-
             if (Input.GetMouseButtonDown(0))
             {
+                Debug.Log("click");
                 // Check if the mouse was clicked over a UI element
                 if (EventSystem.current.IsPointerOverGameObject() && EventSystem.current.currentSelectedGameObject?.gameObject.tag == "Settings")
                 {
@@ -53,6 +60,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (Time.timeScale > 0)
                     {
+                        Debug.Log("good");
                         if (!firstClick)
                         {
                             firstClick = true;
@@ -90,36 +98,44 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator HideClickButton()
     {
+        //a thread thar hice click image at 4 sec after first player click
         yield return new WaitForSeconds(4);
         GameObject.Find("ClickImage").SetActive(false);
     }
 
+    //power controller
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Power")
         {
+            //score point collision
             switch (collision.gameObject.name)
             {
                 case "Diamond":
+                    coinPlayer.pitch = 0.8f;
                     ScoreController.score = ScoreController.score + 20;
                     break;
                 case "Gold":
+                    coinPlayer.pitch = 0.9f;
                     ScoreController.score = ScoreController.score + 15;
                     break;
                 case "Silver":
+                    coinPlayer.pitch = 1.0f;
                     ScoreController.score = ScoreController.score + 10;
                     break;
                 case "Bronze":
+                    coinPlayer.pitch = 1.1f;
                     ScoreController.score = ScoreController.score + 5;
                     break;
 
 
             }
             collision.gameObject.SetActive(false);
+            coinPlayer.Play();
         }
         else if (collision.gameObject.tag == "FlyEnemy")
         {
-            collision.gameObject.SetActive(false);
+            //enemy collision
             loseGame();
         }
     }

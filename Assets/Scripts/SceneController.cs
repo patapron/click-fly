@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Linq;
 
 
 
@@ -97,7 +98,10 @@ public class SceneController : MonoBehaviour
 
     private void removeEnemies()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] normalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] flyEnemies = GameObject.FindGameObjectsWithTag("FlyEnemy");
+
+        var enemies = normalEnemies.Concat(flyEnemies).ToArray();
         foreach (GameObject enemy in enemies)
             GameObject.Destroy(enemy);
     }
@@ -108,6 +112,7 @@ public class SceneController : MonoBehaviour
         foreach (GameObject power in powers)
             GameObject.Destroy(power);
     }
+
 
     public void DeleteRecord()
     {

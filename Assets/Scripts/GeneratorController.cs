@@ -33,15 +33,23 @@ public class GeneratorController : MonoBehaviour
 
             if (!newPowerUp || newPowerUp == null)
             {
+                //get random power prefab
                 GameObject prefabSelected = powerUps[Random.Range(0, powerUps.Length)];
+                //instantiate power
+                //Debug.Log("instaciar: " + prefabSelected.name);
                 newPowerUp = Instantiate(prefabSelected);
+                //position power
                 newPowerUp.transform.position = transform.position + new Vector3(0, Random.Range(-hight, hight), 0);
+                //destroy power at 4.5 seconds if exists
                 Destroy(newPowerUp, 4.5f);
             }
-            Debug.Log("valor: " + newPowerUp);
+            //instaciate new tube prefab
             GameObject newTube = Instantiate(tube);
+            //positionate tube
             newTube.transform.position = transform.position + new Vector3(0, Random.Range(-hight, hight), 0);
+            //destro tuve at 4 if exists
             Destroy(newTube, 4);
+            //reset time
             timeInit = 0;
         }
         else

@@ -127,5 +127,30 @@ PrefabInstance:
       propertyPath: m_TagString
       value: FlyEnemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2257550487171276137, guid: cb449b1df047c3c4a81f10a5c08969f8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cb449b1df047c3c4a81f10a5c08969f8, type: 3}
+--- !u!1 &3328354692089028604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7685606135221992750, guid: cb449b1df047c3c4a81f10a5c08969f8, type: 3}
+  m_PrefabInstance: {fileID: 4942827009391764178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4567929302713910154
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3328354692089028604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 47e8ce90728eb2146bf95821f571506c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
