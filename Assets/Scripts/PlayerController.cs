@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 1;
     private Rigidbody2D playerRB;
-    private float maxRotate = 0;
+    private float maxRotate;
     public bool alive;
     public bool firstClick = false;
 
@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxRotate = 0f;
         //scene set
         sceneController = GameObject.Find("GameController").GetComponent<SceneController>();
 
@@ -50,7 +51,6 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("click");
                 // Check if the mouse was clicked over a UI element
                 if (EventSystem.current.IsPointerOverGameObject() && EventSystem.current.currentSelectedGameObject?.gameObject.tag == "Settings")
                 {
@@ -60,7 +60,6 @@ public class PlayerController : MonoBehaviour
                 {
                     if (Time.timeScale > 0)
                     {
-                        Debug.Log("good");
                         if (!firstClick)
                         {
                             firstClick = true;
@@ -75,24 +74,56 @@ public class PlayerController : MonoBehaviour
                         //playerRB.velocity = Vector2.zero;
                         //playerRB.AddForce(new Vector2(0, 200f));
                         playerRB.velocity = Vector2.up * speed;
-                        maxRotate = 40 - transform.localEulerAngles.z;
+                        //maxRotate = 40 - transform.localEulerAngles.z;
                     }
                 }
 
 
             }
+            //Rotations
+            if (firstClick && Time.timeScale > 0)
+            {
+                Debug.Log("primero rot: " + transform.rotation);
+                Debug.Log("primero localEulerAngles: " + transform.localEulerAngles.z);
+                if (maxRotate < 0 && playerRB.velocity.y > 0)
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0f);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, playerRB.velocity.y * 50f < -85f ? -85f : playerRB.velocity.y * 50f);
+                }
+                maxRotate = playerRB.velocity.y;
+            }
 
-            if (firstClick && maxRotate > 1 && Time.timeScale > 0)
-            {
-                transform.rotation = Quaternion.Euler(0, 0, transform.localEulerAngles.z + 0.1f);
-                maxRotate -= 0.1f;
-            }
-            else if (firstClick && maxRotate <= 1)
-            {
-                maxRotate = 0;
-                transform.rotation = Quaternion.Euler(0, 0, playerRB.velocity.y > 0 ? playerRB.velocity.y * 40 : playerRB.velocity.y * 10);
-                //print("bajando: " + transform.localEulerAngles.z);
-            }
+
+
+            //if(firstClick && Time.timeScale > 0 && playerRB.velocity.y > 0)
+            //{
+            //    transform.rotation = Quaternion.Euler(0, 0, transform.localEulerAngles.z + 0.1f);
+            //}else if(firstClick && Time.timeScale > 0 && playerRB.velocity.y < 0)
+            //{
+            //    transform.rotation = Quaternion.Euler(0, 0, transform.localEulerAngles.z - 0.1f);
+            //}
+
+
+
+            //if (firstClick && maxRotate > 1 && Time.timeScale > 0)
+            //{
+            //    Debug.Log("primero vel: " + playerRB.velocity.y);
+            //    transform.rotation = Quaternion.Euler(0, 0, transform.localEulerAngles.z + 0.1f);
+            //    maxRotate -= 0.1f;
+            //}
+            //else if (firstClick && maxRotate <= 1)
+            //{
+            //    Debug.Log("segundo vel: " + playerRB.velocity.y);
+            //    maxRotate = 0;
+            //    transform.rotation = Quaternion.Euler(0, 0, playerRB.velocity.y > 0 ? playerRB.velocity.y * 40 : playerRB.velocity.y * 10);
+            //}
+            //else
+            //{
+            //    Debug.Log("tercero vel: " + playerRB.velocity.y);
+            //}
         }
     }
 

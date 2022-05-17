@@ -11,13 +11,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
-    Unity.2D.IK.Runtime.dll:
-    - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -73,6 +68,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -80,39 +79,39 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1512}
+      Script: {instanceID: 1542}
     - Class: 114
-      Script: {instanceID: 1782}
+      Script: {instanceID: 1862}
     - Class: 114
-      Script: {instanceID: 2090}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 2162}
+      Script: {instanceID: 2354}
     - Class: 114
-      Script: {instanceID: 2470}
+      Script: {instanceID: 2708}
     - Class: 114
-      Script: {instanceID: 2616}
+      Script: {instanceID: 2880}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2930}
     - Class: 114
-      Script: {instanceID: 2786}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3026}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 3102}
+      Script: {instanceID: 3488}
     - Class: 114
-      Script: {instanceID: 3104}
+      Script: {instanceID: 3490}
     - Class: 114
-      Script: {instanceID: 3808}
+      Script: {instanceID: 4344}
     - Class: 114
-      Script: {instanceID: 4240}
+      Script: {instanceID: 4896}
     - Class: 114
-      Script: {instanceID: 4568}
+      Script: {instanceID: 5294}
     - Class: 114
-      Script: {instanceID: 4582}
+      Script: {instanceID: 5310}
     - Class: 114
-      Script: {instanceID: 4854}
+      Script: {instanceID: 5624}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -162,12 +161,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
-  - hash:
-      serializedVersion: 2
-      Hash: d1b036fbe5adcfe372c77a9d812c7e37
-    assemblyName: Unity.2D.IK.Runtime.dll
-    namespaceName: UnityEditor.U2D.IK
-    className: IKEditorManagerHelper
   - hash:
       serializedVersion: 2
       Hash: bcaee4c2a83047257b5f47d6ed264b75
@@ -224,6 +217,12 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.2D.Animation.Runtime.dll
+    namespaceName: UnityEngine.U2D.Animation
+    className: SpriteSkinUpdateHelper
+  - hash:
+      serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -236,13 +235,13 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: f1d735cc1a21c3704ab52568f4fbfcf8
+      Hash: 91d258529db2b5060a913f2afcea1a21
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: 900e26e47be65738000fe7d57dc5ce7c
+      Hash: d6e33392a421f842b6753efd592b2f5a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GeneratorController
@@ -264,12 +263,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: IKManager2D
-  - hash:
-      serializedVersion: 2
-      Hash: 5f170942ee57c7a568f5bcfc7521adea
-    assemblyName: UnityEngine.TestRunner.dll
-    namespaceName: UnityEngine.TestTools
-    className: EnumerableTestState
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -386,7 +379,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 6fdea4a543fcc7d7a1f060036f7158e5
+      Hash: e2a77ff60b6e04712daf631f54e03c89
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneController
@@ -524,7 +517,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 8bd7a26198997bcc5d83c8f62ad867d2
+      Hash: 711ffc011c1337825cbdbf1b4da9630d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -546,6 +539,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 697beb16d87251227b39de32e68f8fb1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Parallax
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -657,6 +656,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.2D.Animation.Runtime.dll
+    namespaceName: UnityEngine.U2D.Animation
+    className: BufferManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoreCollider
@@ -693,4 +698,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Proyectos/clikfly/acrobatCoPilot v1.0.apk
+  playerPath: D:/Users/pronick/Documents/click-fly/kf.apk
