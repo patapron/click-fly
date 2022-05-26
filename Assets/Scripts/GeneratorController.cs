@@ -35,8 +35,15 @@ public class GeneratorController : MonoBehaviour
             {
                 //get random power prefab
                 GameObject prefabSelected = powerUps[Random.Range(0, powerUps.Length)];
-                //instantiate power
                 //Debug.Log("instaciar: " + prefabSelected.name);
+                //Debug.Log("shield: " + PlayerController.shield);
+
+                while (prefabSelected.name == "Shield" && PlayerController.shield)
+                {
+                    prefabSelected = powerUps[Random.Range(0, powerUps.Length)];
+                    //Debug.Log("otrooooooooooooo: " + prefabSelected.name);
+                }
+                //instantiate power
                 newPowerUp = Instantiate(prefabSelected);
                 //position power
                 newPowerUp.transform.position = transform.position + new Vector3(0, Random.Range(-hight, hight), 0);

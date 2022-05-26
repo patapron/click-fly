@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private float maxRotate;
     public bool alive;
     public bool firstClick = false;
+    public static bool shield = false;
+
 
     //audio
     public AudioClip crashPlane;
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        shield = false;
         maxRotate = 0f;
         //scene set
         sceneController = GameObject.Find("GameController").GetComponent<SceneController>();
@@ -83,8 +86,8 @@ public class PlayerController : MonoBehaviour
             //Rotations
             if (firstClick && Time.timeScale > 0)
             {
-                Debug.Log("primero rot: " + transform.rotation);
-                Debug.Log("primero localEulerAngles: " + transform.localEulerAngles.z);
+                //Debug.Log("primero rot: " + transform.rotation);
+                //Debug.Log("primero localEulerAngles: " + transform.localEulerAngles.z);
                 if (maxRotate < 0 && playerRB.velocity.y > 0)
                 {
                     transform.rotation = Quaternion.Euler(0, 0, 0f);
@@ -95,41 +98,12 @@ public class PlayerController : MonoBehaviour
                 }
                 maxRotate = playerRB.velocity.y;
             }
-
-
-
-            //if(firstClick && Time.timeScale > 0 && playerRB.velocity.y > 0)
-            //{
-            //    transform.rotation = Quaternion.Euler(0, 0, transform.localEulerAngles.z + 0.1f);
-            //}else if(firstClick && Time.timeScale > 0 && playerRB.velocity.y < 0)
-            //{
-            //    transform.rotation = Quaternion.Euler(0, 0, transform.localEulerAngles.z - 0.1f);
-            //}
-
-
-
-            //if (firstClick && maxRotate > 1 && Time.timeScale > 0)
-            //{
-            //    Debug.Log("primero vel: " + playerRB.velocity.y);
-            //    transform.rotation = Quaternion.Euler(0, 0, transform.localEulerAngles.z + 0.1f);
-            //    maxRotate -= 0.1f;
-            //}
-            //else if (firstClick && maxRotate <= 1)
-            //{
-            //    Debug.Log("segundo vel: " + playerRB.velocity.y);
-            //    maxRotate = 0;
-            //    transform.rotation = Quaternion.Euler(0, 0, playerRB.velocity.y > 0 ? playerRB.velocity.y * 40 : playerRB.velocity.y * 10);
-            //}
-            //else
-            //{
-            //    Debug.Log("tercero vel: " + playerRB.velocity.y);
-            //}
         }
     }
 
     IEnumerator HideClickButton()
     {
-        //a thread thar hice click image at 4 sec after first player click
+        //a thread that hide click image at 4 sec after first player click
         yield return new WaitForSeconds(4);
         GameObject.Find("ClickImage").SetActive(false);
     }
@@ -157,6 +131,11 @@ public class PlayerController : MonoBehaviour
                 case "Bronze":
                     coinPlayer.pitch = 1.1f;
                     ScoreController.score = ScoreController.score + 5;
+                    break;
+                case "Shield":
+                    coinPlayer.pitch = 0.6f;
+                    shield = true;
+                    sceneController.ToggleShield(true);
                     break;
 
 
@@ -195,5 +174,8 @@ public class PlayerController : MonoBehaviour
         return firstClick;
     }
 
-
+    private void SetPlayerAlpha(string name, bool value)
+    {
+        //gameObject.GetComponent<Image>().color = value ? solid : transp;
+    }
 }

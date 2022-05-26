@@ -65,6 +65,11 @@ public class SceneController : MonoBehaviour
         }
     }
 
+    public void ToggleShield(bool value)
+    {
+        settingsGO.transform.Find("ShieldButton").gameObject.SetActive(value);
+    }
+
     public void Lose()
     {
         settingsGO.transform.Find("PauseButton").gameObject.SetActive(false);
@@ -141,7 +146,7 @@ public class SceneController : MonoBehaviour
     private void SetButtonAlpha(string name, bool value)
     {
         settingsGO.transform.Find(name).gameObject.GetComponent<Image>().color = value ? solid : transp;
-    } 
+    }
 
     public bool GetSoundValue()
     {
@@ -156,13 +161,25 @@ public class SceneController : MonoBehaviour
 
     public void PauseGame()
     {
-        if(Time.timeScale == 0)
+        if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
         }
         else
         {
             Time.timeScale = 0;
+        }
+    }
+
+    public void Exit()
+    {
+        if (UnityEditor.EditorApplication.isPlaying)
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
+        else
+        {
+            Application.Quit();
         }
     }
 }

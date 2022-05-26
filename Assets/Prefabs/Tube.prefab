@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 8111922325911278645}
   - component: {fileID: 8111922325911278643}
   - component: {fileID: 2584383313325936309}
+  - component: {fileID: 6841428142683063692}
   m_Layer: 0
   m_Name: BotTube
   m_TagString: Untagged
@@ -252,7 +253,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.033821225, y: -0.017152637}
+  m_Offset: {x: 0.020551175, y: -0.14214271}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0, z: 0.06, w: 0.04}
     pivot: {x: 0.5, y: 0.5}
@@ -263,7 +264,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5281496, y: 1.560931}
+  m_Size: {x: 0.269881, y: 1.3109509}
+  m_EdgeRadius: 0
+--- !u!61 &6841428142683063692
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8111922325911278646}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.033982627, y: 0.6405738}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0, z: 0.06, w: 0.04}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.67, y: 1.61}
+    newSize: {x: 2.72, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.52047586, y: 0.24292195}
   m_EdgeRadius: 0
 --- !u!1 &8989332877057167852
 GameObject:

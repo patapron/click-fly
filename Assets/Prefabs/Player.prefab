@@ -159,6 +159,7 @@ MonoBehaviour:
   speed: 1
   alive: 0
   firstClick: 0
+  shieldButton: {fileID: 0}
   crashPlane: {fileID: 8300000, guid: 3e21dfab3cdb09f419e14c9e0d3a888c, type: 3}
   audioPlane: {fileID: 8300000, guid: e606225f62d8129429d4eb77d0c4cefe, type: 3}
   audioPlayer: {fileID: 3093344025086178343}
