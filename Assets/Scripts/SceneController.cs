@@ -12,67 +12,81 @@ public class SceneController : MonoBehaviour
     public GameObject loseGO;
     public GameObject settingsGO;
     public GameObject scoreGO;
-    //private GameObject scoreGO;
-    //private GameObject recordTextGO;
+    public GameObject generatorController;
     public AudioClip audioGame;
     public AudioClip audioLose;
     public AudioSource music;
     public float musicVolume;
     public GameObject player;
     private GameObject playerInstace;
-    private bool musicOn = true;
-    private bool soundOn = true;
+    private bool musicOn;
+    private bool soundOn;
 
     private Color transp = new Color(255, 255, 255, 0.5f);
     private Color solid = new Color(255, 255, 255, 1);
-
-
-
+    private GameObject resetButton;
+    private GameObject pauseButton;
+    private GameObject clickImage;
+    private GameObject shieldButton;
+    private GameObject playButton;
 
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 0;
+
+        // music and sound settings
+        musicOn = !PlayerPrefs.HasKey("music") || PlayerPrefs.GetInt("music") == 1;
+        soundOn = !PlayerPrefs.HasKey("sound") || PlayerPrefs.GetInt("sound") == 1;
         music.clip = audioLose;
-        music.Play();
+        if (musicOn)
+        {
+            music.Play();
+        }
+
+        // score setting
         GameObject.Find("RecordText").GetComponent<TMPro.TextMeshProUGUI>().text = "RECORD: " + PlayerPrefs.GetInt("record", 0).ToString();
+        
+        // buttons settings
+        resetButton = loseGO.transform.Find("ResetButton").gameObject;
+        pauseButton = settingsGO.transform.Find("PauseButton").gameObject;
+        clickImage = scoreGO.transform.Find("ClickImage").gameObject;
+        shieldButton = settingsGO.transform.Find("ShieldButton").gameObject;
+        playButton = loseGO.transform.Find("PlayButton").gameObject;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
 
     public void RunGame()
     {
-
-        settingsGO.transform.Find("PauseButton").gameObject.SetActive(true);
-
-        //SetButtonAlpha("MusicButton", true);
-
+        // instant score reset
         ScoreController.score = 0;
+
+        // buttons reset
+        pauseButton.SetActive(true);
+        resetButton.SetActive(false);
         playerInstace = Instantiate(player, new Vector3(-0.40f, 0, 0), Quaternion.identity);
         loseGO.SetActive(false);
-        scoreGO.transform.Find("ClickImage").gameObject.SetActive(true);
-        Time.timeScale = 1;
+        clickImage.SetActive(true);
+
+        // set the music play
         music.Stop();
         music.clip = audioGame;
         if (musicOn)
         {
             music.Play();
         }
+
+        // start game
+        Time.timeScale = 1;
     }
 
     public void ToggleShield(bool value)
     {
-        settingsGO.transform.Find("ShieldButton").gameObject.SetActive(value);
+        shieldButton.SetActive(value);
     }
 
     public void Lose()
     {
-        settingsGO.transform.Find("PauseButton").gameObject.SetActive(false);
+        pauseButton.SetActive(false);
         music.Stop();
         music.clip = audioLose;
         if (musicOn)
@@ -84,17 +98,25 @@ public class SceneController : MonoBehaviour
             PlayerPrefs.SetInt("record", ScoreController.score);
         }
         loseGO.SetActive(true);
-        loseGO.transform.Find("PlayButton").gameObject.SetActive(false);
-        loseGO.transform.Find("ResetButton").gameObject.SetActive(true);
+        playButton.SetActive(false);
         // Get child nested parent, parsing to GO
         loseGO.transform.Find("GameOver").gameObject.SetActive(true);
         GameObject.Find("RecordText").GetComponent<TMPro.TextMeshProUGUI>().text = "RECORD: " + PlayerPrefs.GetInt("record", 0).ToString();
-        Time.timeScale = 0;
+        StartCoroutine(stopTimeScale());
 
+    }
+
+    private IEnumerator stopTimeScale()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Time.timeScale = 0;
+        resetButton.SetActive(true);
+        Debug.Log("parando el juego");
     }
 
     public void Reset()
     {
+        generatorController.GetComponent<GeneratorController>().initGenerator();
         removeEnemies();
         removePowers();
         Destroy(playerInstace);
@@ -134,12 +156,14 @@ public class SceneController : MonoBehaviour
             musicOn = false;
             music.Stop();
             SetButtonAlpha("MusicButton", false);
+            PlayerPrefs.SetInt("music", 0);
         }
         else
         {
             musicOn = true;
             music.Play();
             SetButtonAlpha("MusicButton", true);
+            PlayerPrefs.SetInt("music", 1);
         }
     }
 
@@ -157,6 +181,7 @@ public class SceneController : MonoBehaviour
     {
         soundOn = !soundOn;
         SetButtonAlpha("SoundButton", soundOn);
+        PlayerPrefs.SetInt("sound", soundOn ? 1 : 0);
     }
 
     public void PauseGame()
@@ -173,13 +198,14 @@ public class SceneController : MonoBehaviour
 
     public void Exit()
     {
-        if (UnityEditor.EditorApplication.isPlaying)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
-        else
-        {
-            Application.Quit();
-        }
+        Application.Quit();
+        //if (UnityEditor.EditorApplication.isPlaying)
+        //{
+        //    UnityEditor.EditorApplication.isPlaying = false;
+        //}
+        //else
+        //{
+        //    Application.Quit();
+        //}
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - Settings
   - Power
   - FlyEnemy
+  - Floor
+  - Score
   layers:
   - Default
   - TransparentFX

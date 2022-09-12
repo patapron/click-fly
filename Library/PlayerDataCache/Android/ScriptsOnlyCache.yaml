@@ -4,15 +4,17 @@ ScriptsOnlyBuild:
     - GeneratorController
     - PlayerController
     - SceneController
-    - ScoreCollider
     - ScoreController
     - TubeController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -28,8 +30,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -79,39 +83,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1542}
+      Script: {instanceID: 1538}
     - Class: 114
-      Script: {instanceID: 1862}
+      Script: {instanceID: 1858}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 2256}
     - Class: 114
-      Script: {instanceID: 2354}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 2708}
+      Script: {instanceID: 2694}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2862}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 3116}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3366}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3406}
+      Script: {instanceID: 3386}
     - Class: 114
-      Script: {instanceID: 3488}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 3490}
+      Script: {instanceID: 3470}
     - Class: 114
-      Script: {instanceID: 4344}
+      Script: {instanceID: 4314}
     - Class: 114
-      Script: {instanceID: 4896}
+      Script: {instanceID: 4854}
     - Class: 114
-      Script: {instanceID: 5294}
+      Script: {instanceID: 5246}
     - Class: 114
-      Script: {instanceID: 5310}
-    - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 5262}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -661,12 +663,6 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScoreCollider
-  - hash:
-      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -698,4 +694,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Users/pronick/Documents/click-fly/kf.apk
+  playerPath: d:/Users/pronick/Documentos/kf.apk

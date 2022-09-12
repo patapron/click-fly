@@ -73,7 +73,7 @@
       "dependencies": {}
     },
     "com.unity.collab-proxy": {
-      "version": "1.15.18",
+      "version": "1.17.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -94,15 +94,6 @@
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.1"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.ide.visualstudio": {
-      "version": "2.0.15",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.test-framework": "1.1.9"
       },
       "url": "https://packages.unity.com"
     },

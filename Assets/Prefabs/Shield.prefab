@@ -92,6 +92,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.16884643
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.20924419
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.000845138
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.000840798
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.17
       objectReference: {fileID: 0}
@@ -116,9 +140,21 @@ PrefabInstance:
       value: 1.2241
       objectReference: {fileID: 0}
     - target: {fileID: 5642260556364984775, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642260556364984775, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642260556364984775, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -3024485797177839052, guid: a858c6fda1892bb49908b36612b05e31, type: 3}
+      objectReference: {fileID: -9127856381093901834, guid: a858c6fda1892bb49908b36612b05e31, type: 3}
+    - target: {fileID: 5642260556364984775, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8187907980447166092, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
       propertyPath: m_Name
       value: Shield
@@ -141,7 +177,7 @@ Animator:
   m_GameObject: {fileID: 2472781199829570335}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 65a68922b8f66b143965a563448b278e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
