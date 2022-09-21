@@ -82,7 +82,6 @@ public class GeneratorController : MonoBehaviour
                 newTube.GetComponent<TubeController>().speed = counter > timeWhenChange ? speed + incrementSpeed : speed;
                 if (counter > timeWhenChange)
                 {
-                    Debug.Log("Time.timeScale" + Time.timeScale);
                     timeToGenerate -= incrementSpeed;
                     counter = 0;
                     speed += incrementSpeed / 2;

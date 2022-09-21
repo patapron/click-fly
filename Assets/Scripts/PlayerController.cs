@@ -38,17 +38,14 @@ public class PlayerController : MonoBehaviour
         sceneController = GameObject.Find("GameController").GetComponent<SceneController>();
 
         //audio
-        if (sceneController.GetSoundValue())
-        {
-            audioPlayer.Stop();
-            audioPlayer.volume = playerVolume;
-            audioPlayer.clip = audioPlane;
+        audioPlayer.Stop();
+        audioPlayer.volume = playerVolume;
+        audioPlayer.clip = audioPlane;
 
-            coinPlayer.Stop();
-            coinPlayer.volume = coinVolume;
-            coinPlayer.clip = coinSound;
+        coinPlayer.Stop();
+        coinPlayer.volume = coinVolume;
+        coinPlayer.clip = coinSound;
 
-        }
 
         playerRB = GetComponent<Rigidbody2D>();
         alive = true;

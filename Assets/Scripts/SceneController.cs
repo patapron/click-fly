@@ -12,7 +12,11 @@ public class SceneController : MonoBehaviour
     public GameObject loseGO;
     public GameObject settingsGO;
     public GameObject scoreGO;
+    public GameObject TutorialGO;
+    public GameObject CreditsGO;
+
     public GameObject generatorController;
+
     public AudioClip audioGame;
     public AudioClip audioLose;
     public AudioSource music;
@@ -24,11 +28,20 @@ public class SceneController : MonoBehaviour
 
     private Color transp = new Color(255, 255, 255, 0.5f);
     private Color solid = new Color(255, 255, 255, 1);
-    private GameObject resetButton;
-    private GameObject pauseButton;
-    private GameObject clickImage;
-    private GameObject shieldButton;
-    private GameObject playButton;
+
+    public GameObject resetButton;
+    public GameObject pauseButton;
+    public GameObject clickImage;
+    public GameObject shieldButton;
+    public GameObject playButton;
+    public GameObject tutorialButton;
+    public GameObject creditsButton;
+
+    public GameObject recordText;
+
+    public GameObject gameOver;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +51,9 @@ public class SceneController : MonoBehaviour
         // music and sound settings
         musicOn = !PlayerPrefs.HasKey("music") || PlayerPrefs.GetInt("music") == 1;
         soundOn = !PlayerPrefs.HasKey("sound") || PlayerPrefs.GetInt("sound") == 1;
+        SetButtonAlpha("MusicButton", musicOn);
+        SetButtonAlpha("SoundButton", soundOn);
+
         music.clip = audioLose;
         if (musicOn)
         {
@@ -45,14 +61,16 @@ public class SceneController : MonoBehaviour
         }
 
         // score setting
-        GameObject.Find("RecordText").GetComponent<TMPro.TextMeshProUGUI>().text = "RECORD: " + PlayerPrefs.GetInt("record", 0).ToString();
-        
+        recordText.GetComponent<TMPro.TextMeshProUGUI>().text = "RECORD: " + PlayerPrefs.GetInt("record", 0).ToString();
+
         // buttons settings
-        resetButton = loseGO.transform.Find("ResetButton").gameObject;
-        pauseButton = settingsGO.transform.Find("PauseButton").gameObject;
-        clickImage = scoreGO.transform.Find("ClickImage").gameObject;
-        shieldButton = settingsGO.transform.Find("ShieldButton").gameObject;
-        playButton = loseGO.transform.Find("PlayButton").gameObject;
+        //resetButton = loseGO.transform.Find("ResetButton").gameObject;
+        //pauseButton = settingsGO.transform.Find("PauseButton").gameObject;
+        //clickImage = scoreGO.transform.Find("ClickImage").gameObject;
+        //shieldButton = settingsGO.transform.Find("ShieldButton").gameObject;
+        //playButton = loseGO.transform.Find("PlayButton").gameObject;
+        //recordLabel = GameObject.Find("RecordText").GetComponent<TMPro.TextMeshProUGUI>().text;
+
     }
 
     public void RunGame()
@@ -63,6 +81,9 @@ public class SceneController : MonoBehaviour
         // buttons reset
         pauseButton.SetActive(true);
         resetButton.SetActive(false);
+        tutorialButton.SetActive(false);
+        creditsButton.SetActive(false);
+
         playerInstace = Instantiate(player, new Vector3(-0.40f, 0, 0), Quaternion.identity);
         loseGO.SetActive(false);
         clickImage.SetActive(true);
@@ -87,6 +108,9 @@ public class SceneController : MonoBehaviour
     public void Lose()
     {
         pauseButton.SetActive(false);
+        tutorialButton.SetActive(true);
+        creditsButton.SetActive(true);
+
         music.Stop();
         music.clip = audioLose;
         if (musicOn)
@@ -101,7 +125,7 @@ public class SceneController : MonoBehaviour
         playButton.SetActive(false);
         // Get child nested parent, parsing to GO
         loseGO.transform.Find("GameOver").gameObject.SetActive(true);
-        GameObject.Find("RecordText").GetComponent<TMPro.TextMeshProUGUI>().text = "RECORD: " + PlayerPrefs.GetInt("record", 0).ToString();
+        recordText.GetComponent<TMPro.TextMeshProUGUI>().text = "RECORD: " + PlayerPrefs.GetInt("record", 0).ToString();
         StartCoroutine(stopTimeScale());
 
     }
@@ -111,7 +135,6 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Time.timeScale = 0;
         resetButton.SetActive(true);
-        Debug.Log("parando el juego");
     }
 
     public void Reset()
@@ -130,22 +153,25 @@ public class SceneController : MonoBehaviour
 
         var enemies = normalEnemies.Concat(flyEnemies).ToArray();
         foreach (GameObject enemy in enemies)
+        {
             GameObject.Destroy(enemy);
+        }
     }
 
     private void removePowers()
     {
         GameObject[] powers = GameObject.FindGameObjectsWithTag("Power");
         foreach (GameObject power in powers)
+        {
             GameObject.Destroy(power);
+        }
     }
 
 
     public void DeleteRecord()
     {
         PlayerPrefs.DeleteKey("record");
-        string recordLabel = GameObject.Find("RecordText").GetComponent<TMPro.TextMeshProUGUI>().text;
-        recordLabel = "RECORD: 0";
+        recordText.GetComponent<TMPro.TextMeshProUGUI>().text = "RECORD: 0";
     }
 
 
@@ -194,6 +220,32 @@ public class SceneController : MonoBehaviour
         {
             Time.timeScale = 0;
         }
+    }
+
+    public void ShowTutorial()
+    {
+        settingsGO.SetActive(false);
+        loseGO.SetActive(false);
+        scoreGO.SetActive(false);
+        TutorialGO.SetActive(true);
+    }
+
+    public void ShowCredits()
+    {
+        settingsGO.SetActive(false);
+        loseGO.SetActive(false);
+        scoreGO.SetActive(false);
+        CreditsGO.SetActive(true);
+    }
+
+    public void ExitCanvas()
+    {
+        TutorialGO.SetActive(false);
+        CreditsGO.SetActive(false);
+
+        settingsGO.SetActive(true);
+        loseGO.SetActive(true);
+        scoreGO.SetActive(true);
     }
 
     public void Exit()

@@ -243,7 +243,7 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: d6e33392a421f842b6753efd592b2f5a
+      Hash: e2f94ae9931f5dcb7b9ea831f7ba1489
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GeneratorController
@@ -381,7 +381,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: e2a77ff60b6e04712daf631f54e03c89
+      Hash: 77fc61a44d6e89629ed5ec41bad47314
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneController
@@ -519,7 +519,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 711ffc011c1337825cbdbf1b4da9630d
+      Hash: 2fddbfc2280bcf299f345856411698bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -694,4 +694,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: d:/Users/pronick/Documentos/kf.apk
+  playerPath: d:/Users/pronick/Documentos/clickfly.apk
