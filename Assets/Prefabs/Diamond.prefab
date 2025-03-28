@@ -92,6 +92,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.12269592
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.12106456
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0005660821
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0002753958
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 583599887436004902, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.12
       objectReference: {fileID: 0}
@@ -116,9 +140,17 @@ PrefabInstance:
       value: 1.2241
       objectReference: {fileID: 0}
     - target: {fileID: 5642260556364984775, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642260556364984775, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642260556364984775, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -827244533615647500, guid: a858c6fda1892bb49908b36612b05e31, type: 3}
+      objectReference: {fileID: -2044481540931092377, guid: a858c6fda1892bb49908b36612b05e31, type: 3}
     - target: {fileID: 8187907980447166092, guid: ad11d25f3f54f714489ca904a589ce2a, type: 3}
       propertyPath: m_Name
       value: Diamond
